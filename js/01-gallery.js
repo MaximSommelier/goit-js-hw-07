@@ -27,8 +27,13 @@ function onClick(evt){
 
     const currentImage = evt.target.closest(".gallery__link");
     const href = currentImage.href;
-  
-    console.log(href);
-};
+    const alt = currentImage.alt;
 
-// console.log(galleryItems);
+    const instance = basicLightbox.create(`
+    div><img src="${href}" alt="${alt}"></div>
+`);
+
+instance.show()
+
+// console.log(href);
+};
