@@ -21,16 +21,14 @@ gallery.addEventListener('click', onClick);
 function onClick(evt){
     evt.preventDefault();
 
-    if (!evt.target.classList.contains('.gallery__image')){
+    if (!evt.target.classList.contains("gallery__image")){
         return;
     }
 
-    // const currentImage = evt.target.closest(".gallery__link");
-    // const { href } = currentImage.href;
-    // const { href } = currentImage.dataset.source;
-    // const { href } = currentImage.getAttribute("href");
+    const currentImage = evt.target.closest(".gallery__link");
+    const href = currentImage.href;
   
-    // console.log(href);
+    console.log(href);
 };
 
 // console.log(galleryItems);
