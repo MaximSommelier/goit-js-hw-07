@@ -25,12 +25,12 @@ function onClick(evt){
         return;
     }
 
-    const currentImage = evt.target.closest(".gallery__link");
+    // const currentImage = evt.target.closest(".gallery__link");
     // const { href } = currentImage.href;
-    // const { href } = currentImage.dataset;
+    // const { href } = currentImage.dataset.source;
     // const { href } = currentImage.getAttribute("href");
   
-    console.log(href);
+    // console.log(href);
 };
 
 // console.log(galleryItems);
