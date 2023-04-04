@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 // Change code below this line
-// const refs = galleryItems
+
 const gallery = document.querySelector(".gallery");
 
 const markup = galleryItems.map(({preview,original,description}) => `<li class="gallery__item">
@@ -14,15 +14,23 @@ const markup = galleryItems.map(({preview,original,description}) => `<li class="
 </a>
 </li>`);
 
-gallery.insertAdjacentHTML('beforeend',markup.join(''));
+gallery.insertAdjacentHTML('beforeend', markup.join(''));
 
 gallery.addEventListener('click', onClick);
 
 function onClick(evt){
     evt.preventDefault();
-    if (!evt.target.classList.containes('.gallery__image')){
+
+    if (!evt.target.classList.contains('.gallery__image')){
         return;
     }
+
+    const currentImage = evt.target.closest(".gallery__link");
+    // const { href } = currentImage.href;
+    // const { href } = currentImage.dataset;
+    // const { href } = currentImage.getAttribute("href");
+  
+    console.log(href);
 };
 
-console.log(galleryItems);
+// console.log(galleryItems);
