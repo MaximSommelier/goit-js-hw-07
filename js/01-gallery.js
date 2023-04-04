@@ -34,6 +34,5 @@ function onClick(evt){
 `);
 
 instance.show()
-
 // console.log(href);
 };
