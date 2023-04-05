@@ -14,7 +14,13 @@ const markup = galleryItems.map(({preview,original,description}) => `<li class="
 
 gallery.insertAdjacentHTML('beforeend', markup.join(''));
 
-gallery.addEventListener('click', onClick);
-
+const galleryLightBox = new SimpleLightbox(".gallery a",{
+  captions: true,
+  captionSelector: 'img',
+  captionType: 'attr',
+  captionsData: 'alt',
+  captionPosition:'bottom',
+  captionDelay: 250,
+});
 
 console.log(galleryItems);
